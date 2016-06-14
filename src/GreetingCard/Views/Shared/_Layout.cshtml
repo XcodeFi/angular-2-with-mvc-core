@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" src="~/favicon.ico" type="image/x-icon" />
+
+    <link href="~/lib/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/lib/css/alertify.core.css" rel="stylesheet" />
+    <link href="~/lib/css/alertify.bootstrap.css" rel="stylesheet" />
+
+    @RenderSection("styles",required:false)
+
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    
+    <title>@ViewBag.Title</title>
+    <script src="~/lib/js/systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(console.log.bind(console));
+    </script>
+</head>
+<body>
+
+    @RenderBody()
+
+    @RenderSection("scripts",required:false)
+
+    <script src="~/lib/js/jquery.js"></script>
+    <script src="~/lib/js/alertify.min.js"></script>
+    <script src="~/lib/js/bootstrap.js"></script>
+</body>
+</html>
