@@ -11,6 +11,7 @@ using Microsoft.Extensions.FileProviders;
 using System.IO;
 using GreetingCard.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace GreetingCard
 {
@@ -49,6 +50,19 @@ namespace GreetingCard
             services.AddDbContext<GreetingCardContext>(options =>
                 options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
 
+            services.AddAuthentication();
+
+            // Polices
+            services.AddAuthorization(options =>
+            {
+                // inline policies
+                options.AddPolicy("AdminOnly", policy =>
+                {
+                    policy.RequireClaim(ClaimTypes.Role, "Admin");
+                });
+
+            });
+
             services.AddMvc();
         }
 
@@ -66,7 +80,6 @@ namespace GreetingCard
             _fileServerOptions.EnableDirectoryBrowsing = true;
             app.UseFileServer(_fileServerOptions);
 
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -75,11 +88,6 @@ namespace GreetingCard
 
                 // Uncomment the following line to add a route for porting Web API 2 controllers.
                 //routes.MapWebApiRoute("DefaultApi", "api/{controller}/{id?}");
-            });
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
             });
         }
         public static void Main(string[] args)
