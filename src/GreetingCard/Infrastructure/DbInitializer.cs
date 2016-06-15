@@ -12,8 +12,8 @@ namespace GreetingCard.Infrastructure
         {
             context = (GreetingCardContext)serviceProvider.GetService(typeof(GreetingCardContext));
 
-            InitializeCard(imagesPath);
             InitializeUserRoles();
+            InitializeCard(imagesPath);
 
         }
 
@@ -25,7 +25,6 @@ namespace GreetingCard.Infrastructure
                 List<Category> _categories = new List<Category>() {
                     new Category
                     {
-                        Id = 1,
                         ImageUrl = "https://ak.imgag.com/imgag/product/siteassets/general/3397604/ximage.jpg.pagespeed.ic.idflA36SvK.webp",
                         DateCreated = DateTime.UtcNow,
                         Description = "Anniversary Ecards",
@@ -40,7 +39,6 @@ namespace GreetingCard.Infrastructure
                     },
                     new Category
                     {
-                        Id = 2,
                         ImageUrl = "https://ak.imgag.com/imgag/product/siteassets/general/3397604/ximage.jpg.pagespeed.ic.idflA36SvK.webp",
                         DateCreated = DateTime.UtcNow,
                         Description = "Anniversary Ecards",
@@ -55,7 +53,6 @@ namespace GreetingCard.Infrastructure
                     },
                     new Category
                     {
-                        Id = 3,
                         ImageUrl = "https://ak.imgag.com/imgag/product/siteassets/general/3397604/ximage.jpg.pagespeed.ic.idflA36SvK.webp",
                         DateCreated = DateTime.UtcNow,
                         Description = "Anniversary Ecards",
@@ -70,7 +67,6 @@ namespace GreetingCard.Infrastructure
                     },
                     new Category
                     {
-                        Id = 4,
                         ImageUrl = "https://ak.imgag.com/imgag/product/siteassets/general/3397604/ximage.jpg.pagespeed.ic.idflA36SvK.webp",
                         DateCreated = DateTime.UtcNow,
                         Description = "Anniversary Ecards",
