@@ -6,11 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" src="~/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Chia sẻ những thông điệp ý nghĩa tới gia đình và bạn bè một cách dễ dàng!">
+    <meta name="author" content="fieldkidpro">
 
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
     <link href="~/lib/css/bootstrap.css" rel="stylesheet" />
     <link href="~/lib/css/font-awesome.css" rel="stylesheet" />
     <link href="~/lib/css/alertify.core.css" rel="stylesheet" />
     <link href="~/lib/css/alertify.bootstrap.css" rel="stylesheet" />
+    @*style main*@
+    <link href="~/css/mainsite.css" rel="stylesheet" />
+    <link href="~/css/sitemain.component.css" rel="stylesheet" />
+    @*end main style*@
 
     @RenderSection("styles",required:false)
 
@@ -21,18 +29,287 @@
     
     <title>@ViewBag.Title</title>
     <script src="~/lib/js/systemjs.config.js"></script>
-    <script>
+    <script>a
         System.import('app').catch(console.log.bind(console));
     </script>
 </head>
 <body>
+    @*header, tieu de*@
+    <header id="scroller">
+        <nav class="navbar navbar-default ccards-navbar margin-bottom-small accelerate" style="border-bottom: 1px solid #ccc; z-index: 9999;">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">
+                        <img class="img-responsive img-logo" style="width:150px;height:25px;" src="~/imgs/logo/eCardsLogo.png" alt="Greetingcards.vn" />
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Thiệp online <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/">Tất cả</a></li>
+                                <li class="divider">Ngày lễ</li>
+                                <li><a href="/animals">Sinh nhật</a></li>
+                                <li><a href="/anniversary">Tình yêu</a></li>
+                                <li><a href="/birthdays">Cảm ơn</a></li>
+                                <li><a href="/business-greetings">Hỏi thăm</a></li>
+                                <li><a href="/care-and-encouragement">Chia sẻ &amp; Động viên</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Tạo thiệp của bạn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Giới thiệu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog">Bài viết</a>
+                        </li>
+                        <li>
+                            <a href="help">Trợ giúp</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="search-btn search-collapse">
+                            <a class="btn btn-default hidden-xs" href="javascript:void(0);">
+                                <i class="fa fa-search"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="black-text visible-xs">
+                                Search
+                            </a>
+                        </li>
+                        <li class="search-box" style="display: none;">
+                            <form action="//" method="GET" class="navbar-form navbar-left" role="search">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" name="q" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+                                            <a class="btn btn-danger search-btn-close">
+                                                <i class="fa fa-close"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="hidden btn btn-default" type="submit">Search</button>
+                            </form>
+                        </li>
+                        <li class="hidden-xs search-collapse">
+                            <a class="btn btn-default" href="https://www.facebook.com/greetingcard.vn/">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="hidden-xs search-collapse">
+                            <a class="btn btn-default" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown search-collapse">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Đăng nhập<strong class="caret"></strong></a>
+                            <div class="dropdown-menu" style="padding:20px;min-width:300px;">
+                                <form method="post" action="login" accept-charset="UTF-8">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Tên đăng nhập" id="username" name="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="password" placeholder="Mật khẩu" id="password" name="password">
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <input id="ckRemember" class="checkbox" type="checkbox" value="true">
+                                        <label for="ckRemember">Nhớ mật khẩu</label>
+                                    </div>
+                                    <button class="apSignInBtn btn btn-crosscards-primary btn-block text-left" data-app="cc">
+                                        <i class="fa fa-sign-in margin-right-small"></i> Đăng nhập
+                                    </button>
+                                    <hr />
+                                    @*<label style="text-align:center;margin-top:5px">Hoặc</label>*@
+                                    <a class="btn btn-block btn-social btn-google-plus">
+                                        <i class="fa fa-google-plus"></i> Sign in with Google
+                                    </a>
+                                    <a class="btn btn-block btn-social btn-facebook">
+                                        <i class="fa fa-facebook"></i> Sign in with Facebook
+                                    </a>
+                                    @*<input class="btn btn-crosscards-primary btn-block text-left" type="button" id="sign-in-google" value="Đăng nhập bằng Google">
+                                        <input class="btn btn-crosscards-primary btn-block text-left" type="button" id="sign-in-facebook" value="Đăng nhập bằng Facebook">*@
+                                </form>
+                            </div>
+                            @*<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Đăng nhập<span class="caret"></span></a>
+                                                <ul class="dropdown-menu" role="menu" style="padding: 20px; min-width: 200px;">
+                                                <li class="margin-bottom-small">
+                                        <button class="apSignInBtn btn btn-crosscards-primary btn-block text-left" data-app="cc">
+                                            <i class="fa fa-sign-in margin-right-small"></i> Đăng nhập
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="apSignUpBtn btn btn-crosscards-primary btn-block text-left" data-app="cc">
+                                            <i class="fa fa-user-plus margin-right-small"></i> Tạo tài khoản
+                                        </button>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <button class="apForgotBtn btn btn-default btn-block text-left" data-app="cc">
+                                            <i class="fa fa-question margin-right-small"></i> Quên mật khẩu
+                                        </button>
+                                    </li>
+                                </ul>*@
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-    @RenderBody()
 
-    @RenderSection("scripts",required:false)
+    </header>
+    @*end header, tieu de*@
+    @*noi bat, spotlight*@
+    <div id="spotlight" class="margin-bottom-small hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-inline">
+                        <li>
+                            <h2 class="margin-none margin-bottom-small black-text" style="background: rgb(213, 213, 213) none repeat scroll 0 0; border-radius: 10px; color: rgb(255, 255, 255) !important; font-size: 16px; font-variant: small-caps; padding: 2px 5px;">Thiệp</h2>
+                        </li>
+                        <li class="margin-left-medium" style="font-size: 14px;">
+                            <a href="holidays/easter" style="color: #333 ;">
+                                Ngày lễ
+                            </a>
+                        </li>
+                        <li class="margin-left-medium" style="font-size: 14px;">
+                            <a href="holidays/spring" style="color: #333 ;">
+                                Mùa xuân
+                            </a>
+                        </li>
+                        <li class="margin-left-medium" style="font-size: 14px;">
+                            <a href="birthdays" style="color: #333 ;">
+                                Sinh nhật
+                            </a>
+                        </li>
+                        <li class="margin-left-medium" style="font-size: 14px;">
+                            <a href="care-and-encouragement" style="color: #333 ;">
+                                Động viên
+                            </a>
+                        </li>
+                        <li class="margin-left-medium" style="font-size: 14px;">
+                            <a href="topics/thanks.html" style="color: #333 ;">
+                                Cảm ơn
+                            </a>
+                        </li>
+                        <li class="margin-left-medium" style="font-size: 14px;">
+                            <a href="topics/get-well.html" style="color: #333 ;">
+                                Chào hỏi
+                            </a>
+                        </li>
+                        <li class="margin-left-medium" style="font-size: 14px;">
+                            <a href="topics/thinking-of-you.html" style="color: #333 ;">
+                                Tình yêu
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*end spotlight*@
 
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    @*footer*@
+    <div class="container">
+
+        <div class="row margin-bottom-large" id="accordion" role="tablist" aria-multiselectable="true">
+        </div>
+        <div id="footer" class="margin-bottom-large">
+            <footer class="row">
+                <div class="col-md-12">
+                    <div class="Footer_Main_Container row">
+                        <div class="col-md-3">
+                            <a href="#" rel="nofollow">
+                                <img class="img-responsive" style="width:194px;height:33px;"
+                                     src="~/imgs/logo/eCardsLogo.png">
+                            </a>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-12 Description">
+                                    Trang web gửi thiệp online miễn phí
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <a href="#" rel="nofollow" class="">Thiệp online</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" rel="nofollow" class="">Thiệp của bạn</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" rel="nofollow" class="">Giới thiệu</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" rel="nofollow" class="">Bài viết</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" rel="nofollow class=" default_footer_link="">Trợ giúp</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 text-muted">Copyright © 2016-@DateTime.Now.Year, Greetingcard.vn</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-12">
+                <p class="text-muted" style="font-size: 12px;">
+                    Gửi thiệp <b>MIỄN PHÍ</b> tới bạn bè và người thân của bạn!Gửi
+                    <a href="/">thiệp </a>
+                    tới bạn bè và người thân của bạn một cách dễ dàng và nhanh chóng với Greetingcard.vn
+                    Chia sẻ những thông điệp ý nghĩa tới gia đình và bạn bè một cách dễ dàng!
+                    <b>Tự mình tạo ra</b> những bức thiệp dễ thương gửi tới bạn bè và người thân của bạn như một món quà ý nghĩa!
+                    Greetingcard.vn – Chia sẻ những điều ý nghĩa của cuộc sống.
+                </p>
+            </div>
+        </div>
+    </div>
+    @*end footer*@
     <script src="~/lib/js/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".search-btn a").click(function () {
+                $(".search-collapse").fadeOut(function () {
+                    $(".search-box").fadeIn();
+                });
+            });
+
+            $(".search-btn-close").click(function () {
+                $(".search-box").fadeOut(function () {
+                    $(".search-collapse").fadeIn();
+                });
+            });
+        });
+    </script>
     <script src="~/lib/js/alertify.min.js"></script>
     <script src="~/lib/js/bootstrap.js"></script>
+    @RenderSection("scripts", required: false)
 </body>
 </html>

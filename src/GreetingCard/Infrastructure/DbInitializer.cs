@@ -13,16 +13,16 @@ namespace GreetingCard.Infrastructure
             context = (GreetingCardContext)serviceProvider.GetService(typeof(GreetingCardContext));
 
             InitializeUserRoles();
-            InitializeCard(imagesPath);
+            Initialize(imagesPath);
 
         }
 
-        private static void InitializeCard(string imagesPath)
+        private static void Initialize(string imagesPath)
         {
             if (!context.Categories.Any())
             {
                 #region Catgory
-                List<Category> _categories = new List<Category>() {
+                var _categories = new Category[] {
                     new Category
                     {
                         ImageUrl = "https://ak.imgag.com/imgag/product/siteassets/general/3397604/ximage.jpg.pagespeed.ic.idflA36SvK.webp",
@@ -80,9 +80,11 @@ namespace GreetingCard.Infrastructure
                         ParentId = 1,
                     }
                     };
+                context.Categories.AddRange(_categories);
+                context.SaveChanges();
                 #endregion
                 #region Card
-                List<Card> _cards = new List<Card>() {
+                var _cards = new Card[] {
                     new Card
                     {
                         CardSize="100*100",

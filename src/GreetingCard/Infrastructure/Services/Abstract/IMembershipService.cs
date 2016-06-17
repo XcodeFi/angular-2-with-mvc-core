@@ -9,5 +9,6 @@ namespace GreetingCard.Infrastructure.Services
         User CreateUser(string username, string email, string password, int[] roles);
         User GetUser(int userId);
         List<Role> GetUserRoles(string username);
+        MembershipContext ValidateUser(object username, string password);
     }
 }

@@ -1,0 +1,386 @@
+﻿
+@{
+    ViewBag.Title = "Cate";
+}
+@section styles{
+    <link href="~/css/styleItem.css" rel="stylesheet" />
+    <style>
+        .item {
+            display: inline-block;
+            width:100%;
+            height:auto;
+        }
+        .nav-stacked .fa-fw {
+            width: 2em;
+        }
+        .nav-header {
+            text-transform: uppercase;
+            /*letter-spacing: 2px;*/
+            /*color: grey;*/
+        }
+        .nav >li>a{
+            padding:0;
+        }
+    </style>
+}
+<div class="row">
+    <div class="col-md-3 hidden-xs">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="nav-header">Ngày kỉ niệm</li>
+            <li><a href="#"><i class="fa fa-birthday-cake fa-fw"></i>Thiệp sinh nhật</a></li>
+            <li><a href="#"><i class="fa fa-glass fa-fw"></i>Thiệp cưới cưới</a></li>
+            <li><a href="#"><i class="fa fa-mail-reply-all fa-fw"></i>Thiệp cảm ơn</a></li>
+            <li><a href="#"><i class="fa fa-star-o fa-fw"></i>Thiệp chúc mừng</a></li>
+            <li><a href="#"><i class="fa fa-child fa-fw"></i>Thiệp mừng thành viên mới</a></li>
+            <li class="nav-header">Ngày lễ</li>
+            <li><a href="#"><i class="fa fa-calendar fa-fw"></i>Mùng 10/3</a></li>
+            <li><a href="#"><i class="fa fa-calendar fa-fw"></i>Quốc tế lao động 1/5</a></li>
+            <li class="active"><a href="#"><i class="fa fa-calendar fa-fw"></i>Ngày quốc tế phụ nữ</a></li>
+            <li><a href="#"><i class="fa fa-calendar fa-fw"></i>Phụ nữ Việt Nam</a></li>
+            <li class="nav-header">Thiệp nhiều người gửi</li>
+            <li><a href="#"><i class="fa fa-birthday-cake fa-fw"></i>Thiệp sinh nhật</a></li>
+            <li><a href="#"><i class="fa fa-heart fa-fw"></i>Lễ tình yêu 14/2</a></li>
+            <li><a href="#"><i class="fa fa-graduation-cap fa-fw"></i>Thiệp chúc mừng tốt nghiệp</a></li>
+            <li><a href="#"><i class="fa fa-star-o fa-fw"></i>Thiệp chúc mừng</a></li>
+            <li><a href="#"><i class="fa fa-child fa-fw"></i>New babby</a></li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <div id="title">
+            <div class="row">
+                <div id="breadcrumbs" class="margin-bottom-small">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ol class="breadcrumb">
+                                <li><a href="/">Trang chủ</a></li>
+                                <li><a href="/">Ngày kỷ niệm</a></li>
+                                <li><a href="/">Thiệp sinh nhật</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 padding-bottom-small">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h1 class="margin-top-medium">Thiệp sinh nhật</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="message-output" class="col-md-12" style="position: relative;">
+                <div class="item margin-bottom-small">
+                    <div class="item-contents">
+                        <a href="../blog/this-resurrection-garden-is-a-perfect-way-to-teach-kids-about-jesus.html">
+                            <img class="content img-responsive" src="http://media.salemwebnetwork.com/cms/CROSSCARDS/30597-Resurrection-Garden.500w.tn.jpg" data-src="http://media.salemwebnetwork.com/cms/CROSSCARDS/30597-Resurrection-Garden.500w.tn.jpg" alt="This Resurrection Garden Is a Perfect Way To Teach Kids About Jesus!">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <a class="black-text" href="../blog/this-resurrection-garden-is-a-perfect-way-to-teach-kids-about-jesus.html">
+                            <span class="center-block">
+                                This Resurrection Garden Is a Perfect Way To Teach Kids About Jesus!
+                            </span>
+                        </a>
+                        <div class="row social-button-row hidden" role="group">
+                            <div class="col-xs-12 btn-group btn-group-justified">
+                                <a class="btn btn-default btn-block btn-facebook" data-share-url="http://www.crosscards.com/blog/this-resurrection-garden-is-a-perfect-way-to-teach-kids-about-jesus.html" href="javascript:void(0);"><strong><i class="fa fa-facebook fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-twitter" data-share-url="http://www.crosscards.com/blog/this-resurrection-garden-is-a-perfect-way-to-teach-kids-about-jesus.html" data-share-description="This Resurrection Garden Is a Perfect Way To Teach Kids About Jesus!" href="javascript:void(0);"><strong><i class="fa fa-twitter fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-pinterest" data-share-url="http://www.crosscards.com/blog/this-resurrection-garden-is-a-perfect-way-to-teach-kids-about-jesus.html" data-share-description="This Resurrection Garden Is a Perfect Way To Teach Kids About Jesus!" data-share-image="http://media.salemwebnetwork.com/cms/CROSSCARDS/30597-Resurrection-Garden.1100w.tn.jpg" href="javascript:void(0);"><strong><i class="fa fa-pinterest fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-email" href="../blog/this-resurrection-garden-is-a-perfect-way-to-teach-kids-about-jesuse8b8.html?sendEmail=true"><strong><i class="fa fa-envelope-o fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-close toggle-social-buttons" href="javascript:void(0)"><strong><i class="fa fa-times fa-lg"></i></strong></a>
+                            </div>
+                        </div>
+                        <div class="row share-button-row">
+                            <div class="col-xs-3" style="padding-right: 0; margin-top:0;">
+                                <a class="btn btn-default btn-block btn-share toggle-social-buttons" href="javascript:void(0)"><strong>Share</strong></a>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <a class="label label-primary" href="video.html">video</a>
+                                <a class="label label-primary" href="craft.html">craft</a>
+                                <a class="label label-primary" href="easter-sunday.html">Easter Sunday</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item margin-bottom-small">
+                    <div class="item-contents">
+                        <a href="../blog/simple-symmetrical-fall-mantel.html">
+                            <img class="content img-responsive" src="http://media.salemwebnetwork.com/cms/IB/27718-hh4.400w.tn.jpg" data-src="http://media.salemwebnetwork.com/cms/IB/27718-hh4.400w.tn.jpg" alt="Simple Symmetrical Fall Mantel">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <a class="black-text" href="../blog/simple-symmetrical-fall-mantel.html">
+                            <span class="center-block">
+                                Simple Symmetrical Fall Mantel
+                            </span>
+                        </a>
+                        <div class="row social-button-row hidden" role="group">
+                            <div class="col-xs-12 btn-group btn-group-justified">
+                                <a class="btn btn-default btn-block btn-facebook" data-share-url="http://www.crosscards.com/blog/simple-symmetrical-fall-mantel.html" href="javascript:void(0);"><strong><i class="fa fa-facebook fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-twitter" data-share-url="http://www.crosscards.com/blog/simple-symmetrical-fall-mantel.html" data-share-description="Simple Symmetrical Fall Mantel" href="javascript:void(0);"><strong><i class="fa fa-twitter fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-pinterest" data-share-url="http://www.crosscards.com/blog/simple-symmetrical-fall-mantel.html" data-share-description="Simple Symmetrical Fall Mantel" data-share-image="http://media.salemwebnetwork.com/cms/IB/27718-hh4.630w.tn.jpg" href="javascript:void(0);"><strong><i class="fa fa-pinterest fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-email" href="../blog/simple-symmetrical-fall-mantele8b8.html?sendEmail=true"><strong><i class="fa fa-envelope-o fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-close toggle-social-buttons" href="javascript:void(0)"><strong><i class="fa fa-times fa-lg"></i></strong></a>
+                            </div>
+                        </div>
+                        <div class="row share-button-row">
+                            <div class="col-xs-3" style="padding-right: 0; margin-top:0;">
+                                <a class="btn btn-default btn-block btn-share toggle-social-buttons" href="javascript:void(0)"><strong>Share</strong></a>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <a class="label label-primary" href="decorating.html">Decorating</a>
+                                <a class="label label-primary" href="fall.html">fall</a>
+                                <a class="label label-primary" href="craft.html">craft</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item margin-bottom-small">
+                    <div class="item-contents">
+                        <a href="../blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html">
+                            <img class="content img-responsive" src="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.400w.tn.jpg" data-src="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.400w.tn.jpg" alt="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <a class="black-text" href="../blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html">
+                            <span class="center-block">
+                                Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;
+                            </span>
+                        </a>
+                        <div class="row social-button-row hidden" role="group">
+                            <div class="col-xs-12 btn-group btn-group-justified">
+                                <a class="btn btn-default btn-block btn-facebook" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" href="javascript:void(0);"><strong><i class="fa fa-facebook fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-twitter" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" data-share-description="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;" href="javascript:void(0);"><strong><i class="fa fa-twitter fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-pinterest" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" data-share-description="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;" data-share-image="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.630w.tn.jpg" href="javascript:void(0);"><strong><i class="fa fa-pinterest fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-email" href="../blog/easy-and-inexpensive-centerpiece-ideas-for-falle8b8.html?sendEmail=true"><strong><i class="fa fa-envelope-o fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-close toggle-social-buttons" href="javascript:void(0)"><strong><i class="fa fa-times fa-lg"></i></strong></a>
+                            </div>
+                        </div>
+                        <div class="row share-button-row">
+                            <div class="col-xs-3" style="padding-right: 0; margin-top:0;">
+                                <a class="btn btn-default btn-block btn-share toggle-social-buttons" href="javascript:void(0)"><strong>Share</strong></a>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <a class="label label-primary" href="fall.html">fall</a>
+                                <a class="label label-primary" href="craft.html">craft</a>
+                                <a class="label label-primary" href="pumpkins.html">pumpkins</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item margin-bottom-small">
+                    <div class="item-contents">
+                        <a href="../blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html">
+                            <img class="content img-responsive" src="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.400w.tn.jpg" data-src="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.400w.tn.jpg" alt="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <a class="black-text" href="../blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html">
+                            <span class="center-block">
+                                Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;
+                            </span>
+                        </a>
+                        <div class="row social-button-row hidden" role="group">
+                            <div class="col-xs-12 btn-group btn-group-justified">
+                                <a class="btn btn-default btn-block btn-facebook" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" href="javascript:void(0);"><strong><i class="fa fa-facebook fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-twitter" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" data-share-description="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;" href="javascript:void(0);"><strong><i class="fa fa-twitter fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-pinterest" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" data-share-description="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;" data-share-image="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.630w.tn.jpg" href="javascript:void(0);"><strong><i class="fa fa-pinterest fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-email" href="../blog/easy-and-inexpensive-centerpiece-ideas-for-falle8b8.html?sendEmail=true"><strong><i class="fa fa-envelope-o fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-close toggle-social-buttons" href="javascript:void(0)"><strong><i class="fa fa-times fa-lg"></i></strong></a>
+                            </div>
+                        </div>
+                        <div class="row share-button-row">
+                            <div class="col-xs-3" style="padding-right: 0; margin-top:0;">
+                                <a class="btn btn-default btn-block btn-share toggle-social-buttons" href="javascript:void(0)"><strong>Share</strong></a>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <a class="label label-primary" href="fall.html">fall</a>
+                                <a class="label label-primary" href="craft.html">craft</a>
+                                <a class="label label-primary" href="pumpkins.html">pumpkins</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item margin-bottom-small">
+                    <div class="item-contents">
+                        <a href="../blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html">
+                            <img class="content img-responsive" src="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.400w.tn.jpg" data-src="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.400w.tn.jpg" alt="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <a class="black-text" href="../blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html">
+                            <span class="center-block">
+                                Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;
+                            </span>
+                        </a>
+                        <div class="row social-button-row hidden" role="group">
+                            <div class="col-xs-12 btn-group btn-group-justified">
+                                <a class="btn btn-default btn-block btn-facebook" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" href="javascript:void(0);"><strong><i class="fa fa-facebook fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-twitter" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" data-share-description="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;" href="javascript:void(0);"><strong><i class="fa fa-twitter fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-pinterest" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" data-share-description="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;" data-share-image="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.630w.tn.jpg" href="javascript:void(0);"><strong><i class="fa fa-pinterest fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-email" href="../blog/easy-and-inexpensive-centerpiece-ideas-for-falle8b8.html?sendEmail=true"><strong><i class="fa fa-envelope-o fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-close toggle-social-buttons" href="javascript:void(0)"><strong><i class="fa fa-times fa-lg"></i></strong></a>
+                            </div>
+                        </div>
+                        <div class="row share-button-row">
+                            <div class="col-xs-3" style="padding-right: 0; margin-top:0;">
+                                <a class="btn btn-default btn-block btn-share toggle-social-buttons" href="javascript:void(0)"><strong>Share</strong></a>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <a class="label label-primary" href="fall.html">fall</a>
+                                <a class="label label-primary" href="craft.html">craft</a>
+                                <a class="label label-primary" href="pumpkins.html">pumpkins</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item margin-bottom-small">
+                    <div class="item-contents">
+                        <a href="../blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html">
+                            <img class="content img-responsive" src="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.400w.tn.jpg" data-src="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.400w.tn.jpg" alt="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <a class="black-text" href="../blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html">
+                            <span class="center-block">
+                                Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;
+                            </span>
+                        </a>
+                        <div class="row social-button-row hidden" role="group">
+                            <div class="col-xs-12 btn-group btn-group-justified">
+                                <a class="btn btn-default btn-block btn-facebook" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" href="javascript:void(0);"><strong><i class="fa fa-facebook fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-twitter" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" data-share-description="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;" href="javascript:void(0);"><strong><i class="fa fa-twitter fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-pinterest" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" data-share-description="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;" data-share-image="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.630w.tn.jpg" href="javascript:void(0);"><strong><i class="fa fa-pinterest fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-email" href="../blog/easy-and-inexpensive-centerpiece-ideas-for-falle8b8.html?sendEmail=true"><strong><i class="fa fa-envelope-o fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-close toggle-social-buttons" href="javascript:void(0)"><strong><i class="fa fa-times fa-lg"></i></strong></a>
+                            </div>
+                        </div>
+                        <div class="row share-button-row">
+                            <div class="col-xs-3" style="padding-right: 0; margin-top:0;">
+                                <a class="btn btn-default btn-block btn-share toggle-social-buttons" href="javascript:void(0)"><strong>Share</strong></a>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <a class="label label-primary" href="fall.html">fall</a>
+                                <a class="label label-primary" href="craft.html">craft</a>
+                                <a class="label label-primary" href="pumpkins.html">pumpkins</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item margin-bottom-small">
+                    <div class="item-contents">
+                        <a href="../blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html">
+                            <img class="content img-responsive" src="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.400w.tn.jpg" data-src="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.400w.tn.jpg" alt="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <a class="black-text" href="../blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html">
+                            <span class="center-block">
+                                Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;
+                            </span>
+                        </a>
+                        <div class="row social-button-row hidden" role="group">
+                            <div class="col-xs-12 btn-group btn-group-justified">
+                                <a class="btn btn-default btn-block btn-facebook" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" href="javascript:void(0);"><strong><i class="fa fa-facebook fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-twitter" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" data-share-description="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;" href="javascript:void(0);"><strong><i class="fa fa-twitter fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-pinterest" data-share-url="http://www.crosscards.com/blog/easy-and-inexpensive-centerpiece-ideas-for-fall.html" data-share-description="Easy and Inexpensive Centerpiece Ideas for Fall&nbsp;" data-share-image="http://media.salemwebnetwork.com/cms/IB/26346-autumn-centerpiece-plate-1200-type.630w.tn.jpg" href="javascript:void(0);"><strong><i class="fa fa-pinterest fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-email" href="../blog/easy-and-inexpensive-centerpiece-ideas-for-falle8b8.html?sendEmail=true"><strong><i class="fa fa-envelope-o fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-close toggle-social-buttons" href="javascript:void(0)"><strong><i class="fa fa-times fa-lg"></i></strong></a>
+                            </div>
+                        </div>
+                        <div class="row share-button-row">
+                            <div class="col-xs-3" style="padding-right: 0; margin-top:0;">
+                                <a class="btn btn-default btn-block btn-share toggle-social-buttons" href="javascript:void(0)"><strong>Share</strong></a>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <a class="label label-primary" href="fall.html">fall</a>
+                                <a class="label label-primary" href="craft.html">craft</a>
+                                <a class="label label-primary" href="pumpkins.html">pumpkins</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item margin-bottom-small">
+                    <div class="item-contents">
+                        <a href="../blog/7-easy-no-carve-pumpkin-decorating-ideas.html">
+                            <img class="content img-responsive" src="http://media.salemwebnetwork.com/cms/IB/26143-painted-pumpkins-1200.400w.tn.jpg" data-src="http://media.salemwebnetwork.com/cms/IB/26143-painted-pumpkins-1200.400w.tn.jpg" alt="7 Easy No Carve Pumpkin Decorating Ideas ">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <a class="black-text" href="../blog/7-easy-no-carve-pumpkin-decorating-ideas.html">
+                            <span class="center-block">
+                                7 Easy No Carve Pumpkin Decorating Ideas
+                            </span>
+                        </a>
+                        <div class="row social-button-row hidden" role="group">
+                            <div class="col-xs-12 btn-group btn-group-justified">
+                                <a class="btn btn-default btn-block btn-facebook" data-share-url="http://www.crosscards.com/blog/7-easy-no-carve-pumpkin-decorating-ideas.html" href="javascript:void(0);"><strong><i class="fa fa-facebook fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-twitter" data-share-url="http://www.crosscards.com/blog/7-easy-no-carve-pumpkin-decorating-ideas.html" data-share-description="7 Easy No Carve Pumpkin Decorating Ideas " href="javascript:void(0);"><strong><i class="fa fa-twitter fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-pinterest" data-share-url="http://www.crosscards.com/blog/7-easy-no-carve-pumpkin-decorating-ideas.html" data-share-description="7 Easy No Carve Pumpkin Decorating Ideas " data-share-image="http://media.salemwebnetwork.com/cms/IB/26143-painted-pumpkins-1200.630w.tn.jpg" href="javascript:void(0);"><strong><i class="fa fa-pinterest fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-email" href="../blog/7-easy-no-carve-pumpkin-decorating-idease8b8.html?sendEmail=true"><strong><i class="fa fa-envelope-o fa-lg"></i></strong></a>
+                                <a class="btn btn-default btn-block btn-close toggle-social-buttons" href="javascript:void(0)"><strong><i class="fa fa-times fa-lg"></i></strong></a>
+                            </div>
+                        </div>
+                        <div class="row share-button-row">
+                            <div class="col-xs-3" style="padding-right: 0; margin-top:0;">
+                                <a class="btn btn-default btn-block btn-share toggle-social-buttons" href="javascript:void(0)"><strong>Share</strong></a>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <a class="label label-primary" href="fall.html">fall</a>
+                                <a class="label label-primary" href="craft.html">craft</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="loading-content" style="width: 100%; display: none;">
+                <div class="alert alert-default text-center">
+                    <h5><i class="fa fa-spin fa-circle-o-notch"></i></h5>
+                </div>
+            </div>
+            <div id="next-page" class="row" style="display: none;">
+                <div class="col-md-12">
+                    <a href="craft905b.html?p=2">Next page <i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <div class="item col-xs-12 margin-top-large" decorator="masonryItem" id="scroll-to-top">
+                <a class="scroll-to-top shadow" href="#scroller">
+                    <div class="alert alert-info text-center">
+                        <strong>You have reached the end! Take me back to the top.</strong>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".toggle-social-buttons").click(function () {
+                var shareButtonRow = $(this).closest(".caption").find(".share-button-row");
+                var socialButtonRow = $(this).closest(".caption").find(".social-button-row");
+
+                if ($(shareButtonRow).hasClass("hidden")) {
+                    $(shareButtonRow).removeClass("hidden");
+                    $(socialButtonRow).addClass("hidden");
+                }
+                else {
+                    $(shareButtonRow).addClass("hidden");
+                    $(socialButtonRow).removeClass("hidden");
+                }
+            });
+            $(".scroll-to-top").click(function () {
+                $("html,body").animate({ scrollTop: 0 }, 500);
+            })
+        });
+    </script>
+}

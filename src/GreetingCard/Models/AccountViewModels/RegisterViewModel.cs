@@ -9,6 +9,9 @@ namespace GreetingCard.Models.AccountViewModels
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name="User name")]
+        public string Username { get; set; }
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

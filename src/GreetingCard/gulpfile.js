@@ -1,4 +1,4 @@
-﻿/// <binding AfterBuild='build-spa, compile-typescript' Clean='clean-lib' />
+﻿/// <binding />
 var gulp = require('gulp'),
     ts = require('gulp-typescript'),
     merge = require('merge'),
