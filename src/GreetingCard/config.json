@@ -1,0 +1,8 @@
+﻿{
+  "AppSettings": {
+    "SiteTitle": "Tiêu đề site",
+    "CacheDbResults": true
+  },
+  "DefaultAdminUsername": "Administrator@test.com",
+  "DefaultAdminPassword": "Password~!1!"
+}

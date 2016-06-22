@@ -10,11 +10,11 @@ namespace GreetingCard.Infrastructure.Repositories.Abstract
     public interface ICateBlogRepository : IEntityBaseRepository<CategoryBlog> { }
     public interface ICommentRepository : IEntityBaseRepository<Comment> { }
     public interface IContactRepository : IEntityBaseRepository<Contact> { }
-    public interface IRoleRepository : IEntityBaseRepository<Role> { }
-    public interface IUserRepository : IEntityBaseRepository<User>
-    {
-        User GetSingleByUsername(string username);
-        IEnumerable<Role> GetUserRoles(string username);
-    }
-    public interface IUserRoleRepository : IEntityBaseRepository<UserRole> { }
+    //public interface IRoleRepository : IEntityBaseRepository<Role> { }
+    //public interface IUserRepository : IEntityBaseRepository<User>
+    //{
+    //    User GetSingleByUsername(string username);
+    //    IEnumerable<Role> GetUserRoles(string username);
+    //}
+    //public interface IUserRoleRepository : IEntityBaseRepository<UserRole> { }
 }

@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
 using GreetingCard.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
+using GreetingCard.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace GreetingCard
 {
@@ -50,20 +46,38 @@ namespace GreetingCard
             services.AddDbContext<GreetingCardContext>(options =>
                 options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
 
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<GreetingCardContext>()
+                .AddDefaultTokenProviders();
+
             services.AddAuthentication();
 
-            // Polices
-            services.AddAuthorization(options =>
-            {
-                // inline policies
-                options.AddPolicy("AdminOnly", policy =>
-                {
-                    policy.RequireClaim(ClaimTypes.Role, "Admin");
-                });
-
-            });
 
             services.AddMvc();
+
+
+            services.AddLogging();
+
+            // Add session related services.
+            services.AddSession();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder =>
+                {
+                    builder.WithOrigins("http://example.com");
+                });
+            });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(
+                    "ManageStore",
+                    authBuilder =>
+                    {
+                        authBuilder.RequireClaim("ManageStore", "Allowed");
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -83,12 +97,23 @@ namespace GreetingCard
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                      name: "areaRoute",
+                      template: "{area:exists}/{controller}/{action}",
+                      defaults: new { action = "Index" });
+
+                routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-               
+                    template: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "Home", action = "Index" });
+
+                //routes.MapRoute(
+                //    name: "api",
+                //    template: "{controller}/{id?}");
+
                 // Uncomment the following line to add a route for porting Web API 2 controllers.
-                //routes.MapWebApiRoute("DefaultApi", "api/{controller}/{id?}");
+                //routes.MapWebApiRoute("DefaultApi", "api/{X}/{id?}");
             });
+            SampleData.InitializeDatabaseAsync(app.ApplicationServices).Wait();
         }
         public static void Main(string[] args)
         {
